@@ -18,7 +18,7 @@ Our project page is available [here](https://chrisliu298.github.io/llm-unlearn-e
   - [Entity Unlearning](#entity-unlearning)
   - [Hazardous Knowledge Unlearning](#hazardous-knowledge-unlearning)
   - [Copyrighted Content Unlearning](#copyrighted-content-unlearning)
-- [Other Experiments](#other-experiments)
+  - [Other Experiments](#other-experiments)
 - [Citation](#citation)
 
 ## Abstract
@@ -330,7 +330,7 @@ python -m scripts.evaluate_copyright --dataset_name ${dataset} --model_name ${mo
 python -m scripts.evaluate_general_local --dataset_name ${dataset} --model_name ${model} --batch_size ${batch_size}
 ```
 
-## Other Experiments
+### Other Experiments
 
 - `scripts/zeroth_order_optim.py` implements the zeroth order optimization for the corruption strength parameter on the WMDP dataset.
 - `scripts/repeat_test_and_qa.py` studies LLMs response behavior on repeating the corrupted prompts. This corresponds to Appendix E.6 in the paper.
