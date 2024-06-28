@@ -49,7 +49,13 @@ export HF_HUB_ENABLE_HF_TRANSFER=1
 
 `demo.py` contains a minimal example of how to use the ECO method. Given the prompt `Who is Harry Potter?`, we corrupt the prompt by adding random noise to the first dimension of the `Harry` and `Potter` tokens. The corrupted prompt is then fed to the LLM to generate a response using greedy decoding.
 
+Under the hood, our implementation wraps a HF model and has its own `forward` and `generate` functions. The prompt classification step and the corruption step are executed before the forward pass.
+
 ```python
+model = ...
+prompt = "Who is Harry Potter?"
+# Apply the corruption pattern as a forward hook, which executes the corruption
+# function before the forward pass
 apply_corruption_hook(
     get_nested_attr(model.model, model.model_config["attack_module"]),
     corrupt_method="rand_noise_first_n",
@@ -60,6 +66,7 @@ apply_corruption_hook(
         "strength": 100,
     },
 )
+# Generate just like a normal model
 generated = model.generate(
     **model.tokenizer(prompt, add_special_tokens=False, return_tensors="pt").to(
         model.device
@@ -67,6 +74,7 @@ generated = model.generate(
     generation_config=model.generation_config,
     eos_token_id=model.tokenizer.eos_token_id,
 )
+# Remove the hook so that it's not applied to future generations
 remove_hooks(model.model)
 print(model.tokenizer.batch_decode(generated, skip_special_tokens=False)[0][len(prompt) :])
 # Output:
