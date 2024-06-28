@@ -1,0 +1,48 @@
+tasks:
+  - name: retain
+    params:
+      model_path: null
+  - name: original
+    params:
+      model_path: "{dataset_name}_{model_name}"
+  - name: corrupt
+    params:
+      model_path: "{dataset_name}_{model_name}"
+      corrupt_method: rand_noise_first_n
+      corrupt_args:
+        dims:
+          - 1
+        strength:
+          - 2
+          - 3
+          - 4
+          - 5
+          - 10
+          - 15
+          - 20
+          - 25
+          - 30
+          - 40
+          - 50
+          - 100
+  - name: ft
+    params:
+      model_path: "{dataset_name}_{model_name}_ft"
+  - name: ga
+    params:
+      model_path: "{dataset_name}_{model_name}_ga"
+  - name: gd
+    params:
+      model_path: "{dataset_name}_{model_name}_gd"
+  - name: kl
+    params:
+      model_path: "{dataset_name}_{model_name}_kl"
+  - name: rd
+    params:
+      model_path: "{dataset_name}_{model_name}_rd"
+  - name: llmu
+    params:
+      model_path: "{dataset_name}_{model_name}_llmu"
+  - name: scrub
+    params:
+      model_path: "{dataset_name}_{model_name}_scrub"

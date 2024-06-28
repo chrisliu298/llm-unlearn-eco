@@ -1,0 +1,11 @@
+embedding_dim: 4096
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "<|im_start|>assistant\n"
+  answer_suffix: "<|im_end|>"
+  prompt_prefix: "<|im_start|>user\n"
+  prompt_suffix: "<|im_end|>\n"
+hf_name: 01-ai/Yi-1.5-9B-Chat
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

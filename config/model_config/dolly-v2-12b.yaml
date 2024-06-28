@@ -1,0 +1,11 @@
+embedding_dim: 5120
+attack_module: gpt_neox.embed_in
+formatting_tokens:
+  answer_prefix: ""
+  answer_suffix: "<|endoftext|>"
+  prompt_prefix: ""
+  prompt_suffix: "<|endoftext|>"
+hf_name: databricks/dolly-v2-12b
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

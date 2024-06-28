@@ -1,0 +1,11 @@
+embedding_dim: 4096
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "GPT4 Correct Assistant: "
+  answer_suffix: "<|end_of_turn|>"
+  prompt_prefix: "<s>GPT4 Correct User: "
+  prompt_suffix: "<|end_of_turn|>"
+hf_name: openchat/openchat-3.5-0106
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

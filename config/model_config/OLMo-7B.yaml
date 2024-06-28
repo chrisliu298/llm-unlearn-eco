@@ -1,0 +1,6 @@
+embedding_dim: 4096
+attack_module: model.transformer.wte
+hf_name: allenai/OLMo-7B
+attn_implementation: eager
+load_in_8bit: false
+load_in_4bit: false

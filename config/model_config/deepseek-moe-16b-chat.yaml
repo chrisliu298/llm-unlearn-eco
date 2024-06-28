@@ -1,0 +1,11 @@
+embedding_dim: 2048
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "Assistant: "
+  answer_suffix: "<|end_of_sentence|>\n\n"
+  prompt_prefix: "User: "
+  prompt_suffix: "\n\n"
+hf_name: deepseek-ai/deepseek-moe-16b-chat
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

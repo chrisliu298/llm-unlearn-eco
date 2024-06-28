@@ -1,0 +1,9 @@
+tasks:
+  - name: corrupt
+    params:
+      corrupt_method: flip_sign_first_n
+      corrupt_args:
+        dims:
+          - {embedding_dim}
+        strength:
+          - null

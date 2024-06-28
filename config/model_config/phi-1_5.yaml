@@ -1,0 +1,11 @@
+embedding_dim: 2048
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "Answer:"
+  answer_suffix: ""
+  prompt_prefix: "Question: "
+  prompt_suffix: "\n"
+hf_name: microsoft/phi-1_5
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

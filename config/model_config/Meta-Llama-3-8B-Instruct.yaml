@@ -1,0 +1,11 @@
+embedding_dim: 4096
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "<|start_header_id|>assistant<|end_header_id|>\n\n"
+  answer_suffix: "<|eot_id|>"
+  prompt_prefix: "<|start_header_id|>user<|end_header_id|>\n\n"
+  prompt_suffix: "<|eot_id|>"
+hf_name: meta-llama/Meta-Llama-3-8B-Instruct
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

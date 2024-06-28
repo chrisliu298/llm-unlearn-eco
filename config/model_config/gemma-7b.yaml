@@ -1,0 +1,6 @@
+embedding_dim: 3072
+attack_module: model.embed_tokens
+hf_name: google/gemma-7b
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

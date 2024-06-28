@@ -1,0 +1,11 @@
+embedding_dim: 6144
+attack_module: transformer.wte
+formatting_tokens:
+  answer_prefix: "Answer:\n"
+  answer_suffix: ""
+  prompt_prefix: "Question:\n"
+  prompt_suffix: "\n\n"
+hf_name: ibm-granite/granite-20b-code-instruct
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

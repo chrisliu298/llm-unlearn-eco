@@ -1,0 +1,11 @@
+embedding_dim: 4096
+attack_module: transformer.word_embeddings
+formatting_tokens:
+  answer_prefix: "<|im_start|>assistant\n"
+  answer_suffix: "<|im_end|>"
+  prompt_prefix: "<|im_start|>user\n"
+  prompt_suffix: "<|im_end|>\n"
+hf_name: tiiuae/falcon-7b-instruct
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

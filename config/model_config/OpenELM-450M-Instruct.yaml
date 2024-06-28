@@ -1,0 +1,6 @@
+embedding_dim: 1536
+attack_module: transformer.token_embeddings
+hf_name: apple/OpenELM-450M-Instruct
+attn_implementation: eager
+load_in_8bit: false
+load_in_4bit: false

@@ -1,0 +1,34 @@
+tasks:
+  - name: retain
+    params:
+      model_path: "{model_name}_{forget_set_name}"
+  - name: original
+    params:
+      model_path: "{model_name}_full"
+  - name: ga
+    params:
+      model_path: "{model_name}_full_ga_{forget_set_name}"
+  - name: gd
+    params:
+      model_path: "{model_name}_full_gd_{forget_set_name}"
+  - name: kl
+    params:
+      model_path: "{model_name}_full_kl_{forget_set_name}"
+  - name: idk
+    params:
+      model_path: "{model_name}_full_idk_{forget_set_name}"
+  - name: npo
+    params:
+      model_path: "{model_name}_full_npo_{forget_set_name}"
+  - name: npo_KL
+    params:
+      model_path: "{model_name}_full_npo_KL_{forget_set_name}"
+  - name: npo_grad_diff
+    params:
+      model_path: "{model_name}_full_npo_grad_diff_{forget_set_name}"
+  - name: soul_gd
+    params:
+      model_path: "{model_name}_full_soul_gd_{forget_set_name}"
+  - name: soul_po
+    params:
+      model_path: "{model_name}_full_soul_po_{forget_set_name}"

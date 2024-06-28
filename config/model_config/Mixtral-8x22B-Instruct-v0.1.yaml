@@ -1,0 +1,11 @@
+embedding_dim: 6144
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: ""
+  answer_suffix: ""
+  prompt_prefix: "[INST] "
+  prompt_suffix: " [/INST]"
+hf_name: mistralai/Mixtral-8x22B-Instruct-v0.1
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: true

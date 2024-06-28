@@ -1,0 +1,11 @@
+embedding_dim: 3072
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "<|assistant|>\n"
+  answer_suffix: ""
+  prompt_prefix: "<|user|>\n"
+  prompt_suffix: "<|end|>\n"
+hf_name: microsoft/Phi-3-mini-4k-instruct
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

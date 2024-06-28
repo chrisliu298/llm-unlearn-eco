@@ -1,0 +1,11 @@
+embedding_dim: 8192
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "<|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>"
+  answer_suffix: "<|END_OF_TURN_TOKEN|>"
+  prompt_prefix: "<|START_OF_TURN_TOKEN|><|USER_TOKEN|>"
+  prompt_suffix: "<|END_OF_TURN_TOKEN|>"
+hf_name: CohereForAI/aya-23-35B
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

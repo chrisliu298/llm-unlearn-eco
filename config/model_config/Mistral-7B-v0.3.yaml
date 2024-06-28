@@ -1,0 +1,6 @@
+embedding_dim: 4096
+attack_module: model.embed_tokens
+hf_name: mistralai/Mistral-7B-v0.3
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

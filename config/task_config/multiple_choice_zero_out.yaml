@@ -1,0 +1,9 @@
+tasks:
+  - name: corrupt
+    params:
+      corrupt_method: zero_out_first_n
+      corrupt_args:
+        dims:
+          - {embedding_dim}
+        strength:
+          - null

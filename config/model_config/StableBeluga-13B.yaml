@@ -1,0 +1,11 @@
+embedding_dim: 5120
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "### Assistant:\n"
+  answer_suffix: ""
+  prompt_prefix: "### User:\n"
+  prompt_suffix: "\n\n"
+hf_name: stabilityai/StableBeluga-13B
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

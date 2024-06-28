@@ -1,0 +1,6 @@
+embedding_dim: 2048
+attack_module: model.embed_tokens
+hf_name: stabilityai/stablelm-2-1_6b
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

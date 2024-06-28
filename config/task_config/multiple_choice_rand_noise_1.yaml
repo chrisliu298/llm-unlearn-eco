@@ -1,0 +1,9 @@
+tasks:
+  - name: corrupt
+    params:
+      corrupt_method: rand_noise_first_n
+      corrupt_args:
+        dims:
+          - 1
+        strength:
+          - 1.E+6

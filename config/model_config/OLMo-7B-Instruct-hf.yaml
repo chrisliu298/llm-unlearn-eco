@@ -1,0 +1,11 @@
+embedding_dim: 4096
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "<|assistant|>\n"
+  answer_suffix: "<|endoftext|>\n"
+  prompt_prefix: "<|endoftext|><|user|>\n"
+  prompt_suffix: "\n"
+hf_name: ssec-uw/OLMo-7B-Instruct-hf
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

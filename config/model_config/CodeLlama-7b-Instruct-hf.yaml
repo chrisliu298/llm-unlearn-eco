@@ -1,0 +1,11 @@
+embedding_dim: 4096
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: ""
+  answer_suffix: ""
+  prompt_prefix: "[INST] "
+  prompt_suffix: " [/INST]"
+hf_name: meta-llama/CodeLlama-7b-Instruct-hf
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

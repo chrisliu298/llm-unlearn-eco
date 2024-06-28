@@ -1,0 +1,11 @@
+embedding_dim: 14848
+attack_module: transformer.word_embeddings
+formatting_tokens:
+  answer_prefix: "Falcon: "
+  answer_suffix: ""
+  prompt_prefix: "User: "
+  prompt_suffix: "\n"
+hf_name: tiiuae/falcon-180B-chat
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: true

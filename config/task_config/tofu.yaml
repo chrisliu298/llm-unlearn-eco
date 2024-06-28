@@ -1,0 +1,48 @@
+tasks:
+  - name: retain
+    params:
+      model_path: "{model_name}_{forget_set_name}"
+  - name: original
+    params:
+      model_path: "{model_name}_full"
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: rand_noise_first_n
+      corrupt_args:
+        dims:
+          - 1
+          - {embedding_dim}
+        strength:
+          - 5
+          - 50
+          - {embedding_dim}
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: rand_noise_rand_n
+      corrupt_args:
+        dims:
+          - 1
+        strength:
+          - 5
+          - 50
+          - {embedding_dim}
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: zero_out_top_k
+      corrupt_args:
+        dims:
+          - {optimal_corrupt_dim}
+        strength:
+          - null
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: flip_sign_top_k
+      corrupt_args:
+        dims:
+          - {embedding_dim}
+        strength:
+          - null

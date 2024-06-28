@@ -1,0 +1,123 @@
+tasks:
+  - name: retain
+    params:
+      model_path: "{model_name}_{forget_set_name}"
+  - name: original
+    params:
+      model_path: "{model_name}_full"
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: reverse_order
+      corrupt_args:
+        dims:
+          - null
+        strength:
+          - null
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: shuffle
+      corrupt_args:
+        dims:
+          - null
+        strength:
+          - null
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: rand_noise_first_n
+      corrupt_args:
+        dims:
+          - 1
+        strength:
+          - 5
+          - 10
+          - 15
+          - 20
+          - 25
+          - 30
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: rand_noise_rand_n
+      corrupt_args:
+        dims:
+          - 1
+        strength:
+          - 5
+          - 10
+          - 15
+          - 20
+          - 25
+          - 30
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: rand_noise_top_k
+      corrupt_args:
+        dims:
+          - 1
+        strength:
+          - 5
+          - 10
+          - 15
+          - 20
+          - 25
+          - 30
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: zero_out_first_n
+      corrupt_args:
+        dims:
+          - 512
+          - 1024
+          - 2048
+          - 2560
+          - 3072
+          - 4096
+        strength:
+          - null
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: zero_out_top_k
+      corrupt_args:
+        dims:
+          - 512
+          - 1024
+          - 2048
+          - 2560
+          - 3072
+          - 4096
+        strength:
+          - null
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: flip_sign_first_n
+      corrupt_args:
+        dims:
+          - 512
+          - 1024
+          - 2048
+          - 2560
+          - 3072
+          - 4096
+        strength:
+          - null
+  - name: corrupt
+    params:
+      model_path: "{model_name}_full"
+      corrupt_method: flip_sign_top_k
+      corrupt_args:
+        dims:
+          - 512
+          - 1024
+          - 2048
+          - 2560
+          - 3072
+          - 4096
+        strength:
+          - null

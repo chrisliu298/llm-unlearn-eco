@@ -1,0 +1,28 @@
+tasks:
+  - name: retain
+    params:
+      model_path: null
+  - name: original
+    params:
+      model_path: "{dataset_name}_{model_name}"
+  - name: ft
+    params:
+      model_path: "{dataset_name}_{model_name}_ft"
+  - name: ga
+    params:
+      model_path: "{dataset_name}_{model_name}_ga"
+  - name: gd
+    params:
+      model_path: "{dataset_name}_{model_name}_gd"
+  - name: kl
+    params:
+      model_path: "{dataset_name}_{model_name}_kl"
+  - name: rd
+    params:
+      model_path: "{dataset_name}_{model_name}_rd"
+  - name: llmu
+    params:
+      model_path: "{dataset_name}_{model_name}_llmu"
+  - name: scrub
+    params:
+      model_path: "{dataset_name}_{model_name}_scrub"

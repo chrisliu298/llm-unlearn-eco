@@ -1,0 +1,11 @@
+embedding_dim: 4608
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "<start_of_turn>model\n"
+  answer_suffix: "<end_of_turn>"
+  prompt_prefix: "<start_of_turn>user\n"
+  prompt_suffix: "<end_of_turn>\n"
+hf_name: google/gemma-2-27b-it
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

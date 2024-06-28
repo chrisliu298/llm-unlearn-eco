@@ -1,0 +1,6 @@
+embedding_dim: 4096
+attack_module: transformer.word_embeddings
+hf_name: bigscience/bloom-7b1
+attn_implementation: eager
+load_in_8bit: false
+load_in_4bit: false

@@ -1,0 +1,11 @@
+embedding_dim: 2048
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "<|assistant|>\n"
+  answer_suffix: "</s>\n"
+  prompt_prefix: "<|user|>\n"
+  prompt_suffix: "</s>\n"
+hf_name: jetmoe/jetmoe-8b-chat
+attn_implementation: flash_attention_2
+load_in_8bit: false
+load_in_4bit: false

@@ -1,0 +1,11 @@
+embedding_dim: 5120
+attack_module: model.embed_tokens
+formatting_tokens:
+  answer_prefix: "<|im_start|>assistant\n"
+  answer_suffix: "<|im_end|>"
+  prompt_prefix: "<|im_start|>user\n"
+  prompt_suffix: "<|im_end|>\n"
+hf_name: baichuan-inc/Baichuan2-13B-Chat
+attn_implementation: eager
+load_in_8bit: false
+load_in_4bit: false
