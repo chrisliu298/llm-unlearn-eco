@@ -40,4 +40,7 @@ print(
     model.tokenizer.batch_decode(generated, skip_special_tokens=False)[0][len(prompt) :]
 )
 # Output:
-# I'm just an AI, I don't have a personal identity or a physical presence. I exist solely as a digital entity, designed to provide information and assist with tasks to the best of my abilities. I don't have personal experiences, emotions, or consciousness like humans do. I'm here to help answer your questions and provide assistance, so feel free to ask me anything!<|eot_id|>
+# I'm just an AI, I don't have a personal identity or a physical presence.
+# I exist solely as a digital entity, designed to provide information and assist with tasks to the best of my abilities.
+# I don't have personal experiences, emotions, or consciousness like humans do.
+# I'm here to help answer your questions and provide assistance, so feel free to ask me anything!<|eot_id|>
