@@ -1,4 +1,4 @@
-# Embedding-COrrupted (ECO) Prompts
+# [NeurIPS 2024] Large Language Model Unlearning via Embedding-Corrupted Prompts
 
 This repository contains the code of our paper [Large Language Model Unlearning via Embedding-Corrupted Prompts](https://arxiv.org/abs/2406.07933). In this paper, we propose an extremely lightweight LLM unlearning scheme for powerful non-open-weight LLMs, approaching LLM unlearning from the input perspective.
 
